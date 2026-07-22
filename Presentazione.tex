@@ -60,7 +60,7 @@ Il lavoro è stato svolto su quest'ultimo, in particolare sulla parte contenente
 Il dataframe contiene 54482 eventi (righe); per ognuno si registrano 72 variabili (colonne), divise in quelle registrate da SD e FD attraverso la dicitura \texttt{sd\_[nome variabile]}, \texttt{fd\_[nome variabile]}.
 \bigskip
 
-Non tutti gli eventi presentano misure dei due tipi di rivelatori. Quelli che hanno una riga completa sono noti come \emph{Golden Hybrids}.  Gli eventi di questo tipo sono di grande valore poiché hanno superato criteri di selezione di ben due classi di rivelatori. In generale possono essere gli eventi di base per una corretta calibrazione dei modelli ML, ma il loro numero esiguo non permette di farlo in questo caso (solo 197).
+Non tutti gli eventi presentano misure dei due tipi di rivelatori. Quelli che hanno una riga completa sono noti come \emph{Golden Hybrids}.  Gli eventi di questo tipo sono di grande valore poiché hanno superato criteri di selezione di ben due classi di rivelatori. In generale possono essere gli eventi di base per una corretta calibrazione dei modelli ML.
 \bigskip
 
 Il dataframe è stato ridotto dunque a 33 variabili, le quali sono state suddivise in info (7), variabili del SD (17) ed errori associati alle misure (7). \\
@@ -85,10 +85,10 @@ Il problema principale di questo metodo sta nel fatto che l'assunzione di isotro
 Il metodo CIC sfrutta la cosiddetta LDF, una funzione che descrive come il segnale degli sciami atmosferici si distribuisce sul terreno in funzione della distanza dall'asse dello sciame. Grazie ad essa si può ricostruire il segnale SD450 anche se nessuna stazione è posizionata esattamente a quella distanza.
 \bigskip
 
-Oltre ciò, la LDF fornisce un criterio di selezione di dati. Nel dataframe (sezione errori) sono prensenti una colonna contenente il $\chi^2$ della LDF (qualità evento) ed una contenente il numero di gradi di libertà del segnale. Facendo il rapporto tra queste quantità si ottiene un valore che indica la bontà del fit eseguito. Più il valore è vicino ad 1, più l'evento è ben ricostruito. (nel progetto, ratio$<4$)
+Oltre ciò, la LDF fornisce un criterio di selezione di dati. Nel dataframe (sezione errori) sono prensenti una colonna contenente il $\chi^2$ della LDF (qualità evento) ed una contenente il numero di gradi di libertà del segnale. Facendo il rapporto tra queste quantità si ottiene un valore che indica la bontà del fit eseguito. Più il valore è vicino ad 1, più l'evento è ben ricostruito. (nel progetto, ratio$<2.5$)
 \bigskip
 
-Un'altro filtro dei dati è stato eseguito attraverso l'osservazione dell'errore relativo "\texttt{sd\_ds450/sd\_s450}". Se questo supera un certo valore (ratio$>4$), il segnale a terra risulta poco accurato e viene scartato.
+Un'altro filtro dei dati è stato eseguito attraverso l'osservazione dell'errore relativo "\texttt{sd\_ds450/sd\_s450}". Se questo supera un certo valore (ratio$>2.5$), il segnale a terra risulta poco accurato e viene scartato.
 
 \end{frame}
 
