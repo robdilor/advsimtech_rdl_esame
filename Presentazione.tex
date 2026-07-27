@@ -92,6 +92,19 @@ Un'altro filtro dei dati è stato eseguito attraverso l'osservazione dell'errore
 
 \end{frame}
 
+\begin{frame}{Variabili in gioco}
+Prima di procedere con l'analisi, osserviamo l'andamento delle variabili principali rispetto all'energia che i modelli vogliono riprodurre.
+\begin{figure}[b!]
+\begin{center}
+{\includegraphics[width=0.45\textwidth]{/scatter_plots/Energia_vs_log\(sd1000\).png}}\
+{\includegraphics[width=0.45\textwidth]{/scatter_plots/Energia_vs_cos\(theta\).png}}
+\caption{Esempi di scatter-plot}
+\label{default}
+\end{center}
+\end{figure}
+Si può notare una relazione quasi del tutto lineare tra l'energia FD ed il logaritmo del segnale. Cosa ben diversa nel caso del coseno, dove non è possibile riconoscere un pattern specifico.
+\end{frame}
+
 \begin{frame}{Regressione Lineare - Elastic Net}
 La prima analisi eseguita sul set di dati è una regressione lineare multivariata utilizzando un insieme di variabili selezionate manualmente in base alla conoscenza fisica del problema.\\ 
 Essendo nota una legge di potenza, questa è stata "linearizzata" tramite logaritmo. Sono state incluse le seguenti variabili:
@@ -114,7 +127,7 @@ Successivamente si opta per un modello più rigoroso, che possa selezionare con 
 \label{default}
 \end{center}
 \end{figure}
-I risultati dei due metodi sono praticamente uguali. ENet ha scelto quasi le stesse variabili della selezione manuale, suggerendo che la fisica è stata ben intuita. Il secondo modello affina i coefficienti associati alle variabili manuali, inoltre sminuisce il contributo della parte angolare.
+I risultati dei due metodi sono praticamente uguali. ENet è più restrittivo, riducendo le variabili a segnale e $\beta$. I coefficienti dei due modelli sono simili per le variabili in comune.
 \end{frame}
 
 \begin{frame}{Variabili Ingegnerizzate}
@@ -132,7 +145,7 @@ Un primo ENet su questo nuovo set di variabili ha permesso di capire quali di qu
 \label{default}
 \end{center}
 \end{figure}
-Il risultato mostra un miglioramento notevole del $R^2$. La variabile principale resta sempre il segnale a terra, ma i contributi non lineari sembrano necessari, in particolare quelli legati alla forma della LDF. 
+Il risultato mostra un miglioramento del $R^2$. Le variabili selezionate fanno pensare ad un errore di scelta, dato che ENet per costruzione tende ad attribuire coefficienti simili a variabili simili.
 \end{frame}
 
 \begin{frame}{Modelli Lineari - Grafico}
@@ -143,6 +156,19 @@ Il risultato mostra un miglioramento notevole del $R^2$. La variabile principale
 \label{default}
 \end{center}
 \end{figure}
+\end{frame}
+
+\begin{frame}{Osservazioni sulle variabili}
+Il grafico precedente è giustificato dall'andamento dei seguenti grafici.
+\begin{figure}[b!]
+\begin{center}
+{\includegraphics[width=0.45\textwidth]{/scatter_plots/Energia_vs_log\(sd1000\)*cos\(theta\).png}}\
+{\includegraphics[width=0.45\textwidth]{/scatter_plots/Energia_vs_sd_beta*log\(sd1000\).png}}
+\caption{Scatter-plot ingegnerizzati}
+\label{default}
+\end{center}
+\end{figure}
+Si nota dunque che le variabili ingegnerizzate sono troppo simili a quelle scelte manualmente. Con un set di dati piccolo, questo porta ENet a confondere le variabili e selezionarle in maniera errata. Il risultato sarà confermato dai modelli non lineari.
 \end{frame}
 
 \begin{frame}{Modelli Lineari }
@@ -184,7 +210,7 @@ Per testare il modello sono state usate sia le variabili scelte manualmente, sia
 \label{default}
 \end{center}
 \end{figure}
-Dal grafico si evince che il modello migliore per Random Forest è quello a variabili scelte manualmente. Gli altri fit sono leggermente peggiori rispetto ai corrispettivi lineari, suggerendo che la relazione lineare cattura gran parte della fisica rilevante. 
+Dal grafico si evince che il modello migliore per Random Forest è quello a variabili scelte manualmente. Gli altri fit sono  peggiori rispetto ai corrispettivi lineari, suggerendo che la relazione lineare cattura gran parte della fisica rilevante. 
 \end{frame}
 
 \begin{frame}{Gradient Boosting}
@@ -229,7 +255,7 @@ Dal grafico si evince che il modello migliore per XGB è quello a variabili scel
 \label{default}
 \end{center}
 \end{figure}
-Dalla figura si evince il miglioramento dei metodi di ensemble rispetto alla regressione lineare, sia come aumento di $R^2$ che come diminuzione dello scarto quadratico medio (MSE).
+Dalla figura si evince i metodi di ensemble non migliorano rispetto alla regressione lineare, sia come aumento di $R^2$ che come diminuzione dello scarto quadratico medio (MSE).
 \end{frame}
 
 \begin{frame}{Importanza delle Variabili}
@@ -240,16 +266,14 @@ Dalla figura si evince il miglioramento dei metodi di ensemble rispetto alla reg
 \label{default}
 \end{center}
 \end{figure}
-Dal seguente grafico possiamo dedurre che la variabile fondamentale per ricostruire l'energia è sempre il segnale a terra. Rispetto a quanto suggeriscono i modelli lineari, l'altro contributo principale lo fornisce l'angolo zenitale. Fa eccezione XGB che invece mette quasi sullo stesso piano il segnale e la forma della LDF, per poi usare $\beta, \cos(\theta)$ per meno del 5\%.
+Dal seguente grafico possiamo dedurre che la variabile fondamentale per ricostruire l'energia è sempre il segnale a terra. In linea con quanto suggeriscono i modelli lineari, l'altro contributo principale lo fornisce $\beta$.
 \end{frame}
 
 \begin{frame}{Conclusioni}
 Dall'analisi di tutti i modelli possiamo trarre conclusioni interessanti:
 \begin{itemize}
     \item La regressione lineare, con le variabili selezionate manualmente, coglie già la fisica fondamentale alla base della ricostruzione dell'energia. Il miglioramento ottenuto con le variabili ingegnerizzate non introduce nuova fisica, ma suggerisce la presenza di relazioni non lineari che un modello lineare non può catturare appieno.
-    \item Random Forest migliora la regressione lineare, confermando le ipotesi precedenti e dimostrando che le non-linearità suggerite sono effettivamente presenti nei dati. Il modello basato su variabili selezionate secondo la conoscenza fisica risulta il più valido.
-    \item Gradient Boosting supera tutti gli altri metodi, raggiungendo le prestazioni migliori in modo coerente con le aspettative. 
-    \item XGBoost non ha prodotto ulteriori miglioramenti significativi rispetto a Gradient Boosting. Questo risultato suggerisce che il dataset è ben pulito e che le relazioni fisiche sono già state completamente catturate.
+    \item I modelli non lineari non riescono a migliorare molto quanto fatto da ENet, probabilmente a causa di un dataset ristretto. Tuttavia, aiutano a leggere possibili correzioni non lineari e soprattutto a smentire modelli poco coerenti come quello delle variabili ingegnerizzate.
 \end{itemize}
 \end{frame}
 
@@ -266,12 +290,11 @@ Il modello Gradient Boosting mostra un R² del 99.78\% sui dati di training, ma 
 \begin{frame}
 \begin{figure}[htbp]
 \begin{center}
-\includegraphics[width=\textwidth]{confronto_CIC_vs_ML_golden.png}
+\includegraphics[width=\textwidth]{confronto_CIC_vs_GBM_golden.png}
 \caption{Confronto finale}
 \label{default}
 \end{center}
 \end{figure}
-
 \end{frame}
 
 \begin{frame}{Sviluppi futuri e Miglioramenti}

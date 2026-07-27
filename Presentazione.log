@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.10.6)  23 JUL 2026 01:03
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.10.6)  27 JUL 2026 23:16
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -766,6 +766,12 @@ LaTeX Warning: Label `default' multiply defined.
 
 LaTeX Warning: Label `default' multiply defined.
 
+
+LaTeX Warning: Label `default' multiply defined.
+
+
+LaTeX Warning: Label `default' multiply defined.
+
 )
 \openout1 = `Presentazione.aux'.
 
@@ -917,189 +923,244 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 [7
 
 ]
+<results//scatter_plots/Energia_vs_log(sd1000).png, id=89, 462.528pt x 346.896p
+t>
+File: results//scatter_plots/Energia_vs_log(sd1000).png Graphic file (type png)
+
+<use results//scatter_plots/Energia_vs_log(sd1000).png>
+Package pdftex.def Info: results//scatter_plots/Energia_vs_log(sd1000).png  use
+d on input line 106.
+(pdftex.def)             Requested size: 154.88684pt x 116.16455pt.
+<results//scatter_plots/Energia_vs_cos(theta).png, id=91, 462.528pt x 346.896pt
+>
+File: results//scatter_plots/Energia_vs_cos(theta).png Graphic file (type png)
+<use results//scatter_plots/Energia_vs_cos(theta).png>
+Package pdftex.def Info: results//scatter_plots/Energia_vs_cos(theta).png  used
+ on input line 106.
+(pdftex.def)             Requested size: 154.88684pt x 116.16455pt.
+
 
 [8
 
-]
-<results/LR&Enet.png, id=98, 1011.78pt x 433.62pt>
-File: results/LR&Enet.png Graphic file (type png)
-<use results/LR&Enet.png>
-Package pdftex.def Info: results/LR&Enet.png  used on input line 118.
-(pdftex.def)             Requested size: 275.3573pt x 118.01189pt.
-
+ <./results//scatter_plots/Energia_vs_log(sd1000).png> <./results//scatter_plot
+s/Energia_vs_cos(theta).png>]
 
 [9
 
- <./results/LR&Enet.png>]
+]
+<results/LR&Enet.png, id=112, 1011.78pt x 433.62pt>
+File: results/LR&Enet.png Graphic file (type png)
+<use results/LR&Enet.png>
+Package pdftex.def Info: results/LR&Enet.png  used on input line 131.
+(pdftex.def)             Requested size: 275.3573pt x 118.01189pt.
+
+pdfTeX warning (ext4): destination with the same identifier (name{default}) has
+ been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.131 \end{frame}
+                 
 
 [10
 
+ <./results/LR&Enet.png>]
+
+[11
+
 ]
-<results/CombVars.png, id=117, 462.528pt x 346.896pt>
+<results/CombVars.png, id=128, 462.528pt x 346.896pt>
 File: results/CombVars.png Graphic file (type png)
 <use results/CombVars.png>
-Package pdftex.def Info: results/CombVars.png  used on input line 136.
+Package pdftex.def Info: results/CombVars.png  used on input line 149.
 (pdftex.def)             Requested size: 172.09766pt x 129.07468pt.
 
 pdfTeX warning (ext4): destination with the same identifier (name{default}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.136 \end{frame}
+l.149 \end{frame}
                  
 
-[11
+[12
 
  <./results/CombVars.png>]
-<results/Confronto_Coefficienti.png, id=126, 1084.05pt x 722.7pt>
+<results/Confronto_Coefficienti.png, id=137, 1084.05pt x 722.7pt>
 File: results/Confronto_Coefficienti.png Graphic file (type png)
 <use results/Confronto_Coefficienti.png>
 Package pdftex.def Info: results/Confronto_Coefficienti.png  used on input line
- 146.
+ 159.
 (pdftex.def)             Requested size: 292.56812pt x 195.04338pt.
 
 pdfTeX warning (ext4): destination with the same identifier (name{default}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.146 \end{frame}
+l.159 \end{frame}
                  
-
-[12
-
- <./results/Confronto_Coefficienti.png>]
 
 [13
 
-]
+ <./results/Confronto_Coefficienti.png>]
+<results//scatter_plots/Energia_vs_log(sd1000)*cos(theta).png, id=147, 462.528p
+t x 346.896pt>
+File: results//scatter_plots/Energia_vs_log(sd1000)*cos(theta).png Graphic file
+ (type png)
+<use results//scatter_plots/Energia_vs_log(sd1000)*cos(theta).png>
+Package pdftex.def Info: results//scatter_plots/Energia_vs_log(sd1000)*cos(thet
+a).png  used on input line 172.
+(pdftex.def)             Requested size: 154.88684pt x 116.16455pt.
+<results//scatter_plots/Energia_vs_sd_beta*log(sd1000).png, id=148, 462.528pt x
+ 346.896pt>
+File: results//scatter_plots/Energia_vs_sd_beta*log(sd1000).png Graphic file (t
+ype png)
+<use results//scatter_plots/Energia_vs_sd_beta*log(sd1000).png>
+Package pdftex.def Info: results//scatter_plots/Energia_vs_sd_beta*log(sd1000).
+png  used on input line 172.
+(pdftex.def)             Requested size: 154.88684pt x 116.16455pt.
+
+pdfTeX warning (ext4): destination with the same identifier (name{default}) has
+ been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.172 \end{frame}
+                 
 
 [14
 
-]
+ <./results//scatter_plots/Energia_vs_log(sd1000)*cos(theta).png> <./results//s
+catter_plots/Energia_vs_sd_beta*log(sd1000).png>]
 
 [15
 
 ]
-<results/RF_Confronto.png, id=157, 1011.78pt x 433.62pt>
+
+[16
+
+]
+
+[17
+
+]
+<results/RF_Confronto.png, id=179, 1011.78pt x 433.62pt>
 File: results/RF_Confronto.png Graphic file (type png)
 <use results/RF_Confronto.png>
-Package pdftex.def Info: results/RF_Confronto.png  used on input line 188.
+Package pdftex.def Info: results/RF_Confronto.png  used on input line 214.
 (pdftex.def)             Requested size: 275.3573pt x 118.01189pt.
 
 pdfTeX warning (ext4): destination with the same identifier (name{default}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.188 \end{frame}
-                 
-
-[16
-
- <./results/RF_Confronto.png>]
-
-[17
-
-]
-<results/GB_Confronto.png, id=173, 1011.78pt x 433.62pt>
-File: results/GB_Confronto.png Graphic file (type png)
-<use results/GB_Confronto.png>
-Package pdftex.def Info: results/GB_Confronto.png  used on input line 205.
-(pdftex.def)             Requested size: 258.14648pt x 110.63449pt.
-
-pdfTeX warning (ext4): destination with the same identifier (name{default}) has
- been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.205 \end{frame}
+l.214 \end{frame}
                  
 
 [18
 
- <./results/GB_Confronto.png>]
+ <./results/RF_Confronto.png>]
 
 [19
 
 ]
-<results/XGB_Confronto.png, id=191, 1011.78pt x 433.62pt>
-File: results/XGB_Confronto.png Graphic file (type png)
-<use results/XGB_Confronto.png>
-Package pdftex.def Info: results/XGB_Confronto.png  used on input line 222.
+<results/GB_Confronto.png, id=197, 1011.78pt x 433.62pt>
+File: results/GB_Confronto.png Graphic file (type png)
+<use results/GB_Confronto.png>
+Package pdftex.def Info: results/GB_Confronto.png  used on input line 231.
 (pdftex.def)             Requested size: 258.14648pt x 110.63449pt.
 
 pdfTeX warning (ext4): destination with the same identifier (name{default}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.222 \end{frame}
+l.231 \end{frame}
                  
 
 [20
 
+ <./results/GB_Confronto.png>]
+
+[21
+
+]
+<results/XGB_Confronto.png, id=213, 1011.78pt x 433.62pt>
+File: results/XGB_Confronto.png Graphic file (type png)
+<use results/XGB_Confronto.png>
+Package pdftex.def Info: results/XGB_Confronto.png  used on input line 248.
+(pdftex.def)             Requested size: 258.14648pt x 110.63449pt.
+
+pdfTeX warning (ext4): destination with the same identifier (name{default}) has
+ been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.248 \end{frame}
+                 
+
+[22
+
  <./results/XGB_Confronto.png>]
-<results/Confronto_R2_MSE.png, id=200, 1156.32pt x 505.89pt>
+<results/Confronto_R2_MSE.png, id=222, 1156.32pt x 505.89pt>
 File: results/Confronto_R2_MSE.png Graphic file (type png)
 <use results/Confronto_R2_MSE.png>
-Package pdftex.def Info: results/Confronto_R2_MSE.png  used on input line 233.
+Package pdftex.def Info: results/Confronto_R2_MSE.png  used on input line 259.
 (pdftex.def)             Requested size: 344.19533pt x 150.57939pt.
 
 pdfTeX warning (ext4): destination with the same identifier (name{default}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.233 \end{frame}
+l.259 \end{frame}
                  
 
-[21
+[23
 
  <./results/Confronto_R2_MSE.png>]
-<results/Confronto_Importanza_Variabili.png, id=209, 1084.05pt x 361.35pt>
+<results/Confronto_Importanza_Variabili.png, id=231, 1084.05pt x 361.35pt>
 File: results/Confronto_Importanza_Variabili.png Graphic file (type png)
 <use results/Confronto_Importanza_Variabili.png>
 Package pdftex.def Info: results/Confronto_Importanza_Variabili.png  used on in
-put line 244.
+put line 270.
 (pdftex.def)             Requested size: 344.19533pt x 114.7301pt.
 
 pdfTeX warning (ext4): destination with the same identifier (name{default}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.244 \end{frame}
+l.270 \end{frame}
                  
-
-[22
-
- <./results/Confronto_Importanza_Variabili.png>]
-
-[23
-
-]
 
 [24
 
+ <./results/Confronto_Importanza_Variabili.png>]
+
+[25
+
+]
+
+[26
+
 {/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
-<results/confronto_CIC_vs_ML_golden.png, id=233, 1517.4291pt x 827.7324pt>
-File: results/confronto_CIC_vs_ML_golden.png Graphic file (type png)
-<use results/confronto_CIC_vs_ML_golden.png>
-Package pdftex.def Info: results/confronto_CIC_vs_ML_golden.png  used on input 
-line 275.
-(pdftex.def)             Requested size: 344.19533pt x 187.74738pt.
+<results/confronto_CIC_vs_GBM_golden.png, id=256, 1604.1531pt x 827.7324pt>
+File: results/confronto_CIC_vs_GBM_golden.png Graphic file (type png)
+<use results/confronto_CIC_vs_GBM_golden.png>
+Package pdftex.def Info: results/confronto_CIC_vs_GBM_golden.png  used on input
+ line 298.
+(pdftex.def)             Requested size: 344.19533pt x 177.59273pt.
 
 pdfTeX warning (ext4): destination with the same identifier (name{default}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.275 \end{frame}
+l.298 \end{frame}
                  
 
-[25
+[27
 
- <./results/confronto_CIC_vs_ML_golden.png>]
+ <./results/confronto_CIC_vs_GBM_golden.png>]
 
-[26
+[28
 
 ]
 
-[27
+[29
 
 ]
 \tf@nav=\write6
@@ -1124,13 +1185,13 @@ Package rerunfilecheck Info: File `Presentazione.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 23858 strings out of 467747
- 460385 string characters out of 5426933
- 830944 words of memory out of 5000000
- 52033 multiletter control sequences out of 15000+600000
+ 23902 strings out of 467747
+ 462566 string characters out of 5426933
+ 830946 words of memory out of 5000000
+ 52073 multiletter control sequences out of 15000+600000
  632059 words of font info for 57 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 128i,15n,123p,636b,554s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 128i,15n,123p,636b,552s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb>
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></
@@ -1144,10 +1205,10 @@ ve/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texliv
 e/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive
 /2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/
 2025/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on Presentazione.pdf (27 pages, 4962525 bytes).
+Output written on Presentazione.pdf (29 pages, 5850603 bytes).
 PDF statistics:
- 327 PDF objects out of 1000 (max. 8388607)
- 210 compressed objects within 3 object streams
- 56 named destinations out of 1000 (max. 500000)
- 130 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 349 PDF objects out of 1000 (max. 8388607)
+ 220 compressed objects within 3 object streams
+ 60 named destinations out of 1000 (max. 500000)
+ 150 words of extra memory for PDF output out of 10000 (max. 10000000)
 
