@@ -284,7 +284,8 @@ La verifica finale del modello di Machine Learning rispetto al metodo standard C
 La scelta degli eventi golden deriva dal fatto che in questi sono gli unici eventi per i quali è disponibile l'energia misurata da FD, che rappresenta la "verità" indipendente necessaria per validare la ricostruzione.
 \bigskip
 
-Il modello Gradient Boosting presenta un $R^2$ lineare minore di quello del CIC (-0.7\% in log, -12\% in lineare), inoltre presenta un grave problema di overfitting nel test ($R^2_{test}=0.9997$). Probabilmente il metodo ML considera troppe variabili con pochi dati e perde di efficacia.
+Il modello Gradient Boosting presenta un $R^2$ lineare minore di quello del CIC (-0.7\% in log, -12\% in lineare), inoltre presenta un grave problema di overfitting nel test ($R^2_{test}=0.9997$). Probabilmente il metodo ML considera troppe variabili con pochi dati e perde di efficacia.\\
+Osservando la figura (e), possiamo notare come l'errore relativo tra le due ricostruzioni è piccolo, il che suggerisce che i modelli commettono circa gli stessi errori.
 \end{frame}
 
 \begin{frame}

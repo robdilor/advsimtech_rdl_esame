@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.10.6)  28 JUL 2026 13:25
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.10.6)  28 JUL 2026 14:07
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1142,14 +1142,14 @@ l.270 \end{frame}
 File: results/confronto_CIC_vs_GBM_golden.png Graphic file (type png)
 <use results/confronto_CIC_vs_GBM_golden.png>
 Package pdftex.def Info: results/confronto_CIC_vs_GBM_golden.png  used on input
- line 298.
+ line 299.
 (pdftex.def)             Requested size: 344.19533pt x 177.59273pt.
 
 pdfTeX warning (ext4): destination with the same identifier (name{default}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.298 \end{frame}
+l.299 \end{frame}
                  
 
 [27
@@ -1204,7 +1204,7 @@ xlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texli
 ve/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texliv
 e/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive
 /2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on Presentazione.pdf (29 pages, 5835454 bytes).
+Output written on Presentazione.pdf (29 pages, 5783581 bytes).
 PDF statistics:
  343 PDF objects out of 1000 (max. 8388607)
  216 compressed objects within 3 object streams
